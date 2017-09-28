@@ -1,0 +1,93 @@
+/**account.wxss**/
+/*tab按钮  */
+.tab {
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30rpx;
+  width: 100%;
+  
+}
+.tab_item{
+   flex: 1; 
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #efefef;  
+}
+.i_active{
+  border-bottom-color: #fd6a00;
+  color: #fd6a00;
+}
+.container_box{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.view_list{
+  flex: 1;
+  width: 100%;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/*充值  */
+.p_money{
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: rgb(110, 107, 104);
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.m_i_box{
+  text-align: center;
+}
+.moneyinput{
+  border: 1px solid #fd6a00;
+  width: 450rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;  
+  border-radius: 12rpx;
+}
+.moneyinput::after{
+  content: '元';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 72rpx;
+  text-align: center;
+  z-index: 10;
+  background: #fff;
+}
+.p_m_top{
+  line-height: 106rpx;
+  width: 100%;
+}
+.p_m_bottom{
+  line-height: 70rpx;
+  width: 100%;
+  
+}
+.fapiao{
+  display: block;
+  width: 100%;
+  background: #efefef;
+  color:  #8861AB;
+}
+
+/* 交易查询 */
+.searchbox{
+  width: 100%;
+}

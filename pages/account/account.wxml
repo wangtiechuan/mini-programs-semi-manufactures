@@ -1,0 +1,100 @@
+<!--account.wxml-->
+<view class="container">
+  <view class='top_box'>
+
+    <view class="top_content">
+      <text class='pagetitle'>账户中心</text>
+      <view class="showmenu" bindtap="showmenu">
+        <image class="showmenuimg" src="../../img/ico-wtwindow-28.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='container_box'>
+
+    <view class='tab' bindtap='tabtype'>
+      <view class="tab_item {{tabindex==1 ? 'i_active':''}}" data-type="1">交易查询</view>
+      <view class="tab_item {{tabindex==1 ? '':'i_active'}}" data-type="0">充值</view>
+    </view>
+
+    <view class='view_list'>
+      <view wx:if='{{tabindex==1}}' class='searchbox'>
+
+        <view class='date_con'>
+          <text>筛选</text>
+          <view class="datebox">
+            <picker mode="date" value="{{date1}}" start="2000-01-01" end="2028-01-01" bindchange="bindDateBegin">
+              <view class="picker">
+                {{date1}}
+              </view>
+            </picker>
+          </view>
+          <text>到</text>
+          <view class="datebox">
+            <picker mode="date" value="{{date2}}" start="2000-01-01" end="2028-01-01" bindchange="bindDateAfter">
+              <view class="picker">
+                {{date2}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            <text class='serach_btn'>查询</text>
+          </view>
+        </view>
+
+      </view>
+      <view wx:elif='{{tabindex==0}}' class='p_money'>
+      <view class='p_m_top'>
+          <view>您当前的余额</view>
+            <view>{{lastmoney}}元</view>
+            <view>我要充值</view>
+            <view class='m_i_box'>
+              <input class="moneyinput" type="number" confirm-type="done" bindinput='i_money'/>
+            </view>
+      </view>
+         
+          
+          <view class='p_m_bottom'>
+            <view>   <navigator class='fapiao' url="../linkman/linkman?postOraccept=1" open-type="redirect" >您可以为所充金额申请开具发票</navigator>         
+</view>
+            <view>您的充值金额将可以用于直接支付快递费用</view>
+          </view>
+
+      </view>
+
+
+    </view>
+
+
+  </view>
+
+
+
+  <view class='footer_btn_box' wx:if="{{tabindex==0}}">
+    <button class="footer_btn" >提交</button>
+  </view>
+
+  <view class="pagemenu" animation="{{menuanimate}}">
+    <view class="menu_item" bindtap="topostexpress">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_dialog.png"></image>
+      </view>
+      <text class="menu_text">发快递</text>
+    </view>
+    <view class="menu_item menu_center" bindtap="toaccount">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_msg.png"></image>
+      </view>
+      <text class="menu_text">账户中心</text>
+    </view>
+    <view class="menu_item" bindtap="toacceptexpress">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_progress.png"></image>
+      </view>
+      <text class="menu_text">收快递</text>
+    </view>
+  </view>
+
+
+
+</view>

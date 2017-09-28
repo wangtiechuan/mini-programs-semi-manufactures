@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/searchorder/searchorder",
+    "pages/acceptexpress/acceptexpress",
+    "pages/account/account",    
+    "pages/linkman/linkman" ,
+    "pages/newman/newman"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的物流",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

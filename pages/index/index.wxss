@@ -1,0 +1,202 @@
+/**index.wxss**/
+
+/* 地址信息 */
+.address_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28rpx;
+  padding: 14rpx 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.a_r_l_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.a_m_c_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.a_r_l_ico{
+  width: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.post_ico{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+}
+.accept_ico{
+   display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #fd6a00;
+  color: #fff;
+}
+.address_msg_con{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.point_right{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.address_btn{
+  display: block;
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fd6a00;
+  border-left: 1px solid #efefef;
+}
+.address_row_left{
+  flex: 1;
+  padding:0 16rpx; 
+}
+.sex{
+  color: #948f8a;
+  font-size: 24rpx;
+}
+.phone{
+  color: #948f8a;
+  font-size: 26rpx;
+}
+.address_text{
+  color: #948f8a;
+  font-size: 26rpx;
+}
+
+/* 物品信息 */
+.g_m_title{
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #efefef;  
+}
+.a_m_t_img_box{
+ display: inline-block;
+}
+.g_m_con{
+  padding: 0 40rpx;
+  font-size: 28rpx;  
+}
+.g_m_c_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #efefef;    
+  font-size: 28rpx;    
+}
+.g_m_c_r_left{
+  width: 140rpx;
+}
+.g_m_c_r_right{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sizeinput{
+  flex: 1;
+  border: 1px solid #efefef;
+  margin-right:10rpx; 
+  border-radius: 16rpx;
+  text-align: center;
+}
+.w_inout_box{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.a_m_t_img{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+.weightinput{
+  flex:1;
+   border: 1px solid #efefef;
+  border-radius: 16rpx;
+  text-align: right;
+margin-right: 20rpx;  
+padding: 0 6rpx;
+   
+}
+.des_input{
+  flex: 1;
+  border:none;
+}
+.typepicker{
+  flex: 1;
+}
+.citypicker{
+  flex: 1;
+}
+.paypeople{
+  padding: 0 40rpx;
+}
+.a_r_l_ico_money{
+  height: 40rpx;
+}
+.money_ico{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 50%;
+  border:1px solid #6e6b68;
+  color: #6e6b68;
+}
+
+
+/* 修改用户地址信息遮罩层  */
+.cover_page{
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 20;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+}
+.cover_page_box{
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+.cover_row{
+  padding: 0 40rpx;
+}

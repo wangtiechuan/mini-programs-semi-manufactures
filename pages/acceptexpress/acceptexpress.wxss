@@ -1,0 +1,94 @@
+/**acceptexpress.wxss**/
+
+/* 订单信息（条） */
+
+.item_con_box {
+  height: 136rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item_btn {
+  box-sizing: border-box;
+  height: 100%;
+  width: 106rpx;
+  background: #c2b8b4;
+  color: #948f8a;
+  text-align: center;
+  padding: 20rpx;
+  padding-bottom: 0;
+  font-size: 28rpx;
+}
+
+.item_msg_box {
+  flex: 1;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20rpx;
+}
+
+.item_masg_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.msg_row_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+
+.t {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t_1 {
+  width: 90rpx;
+  vertical-align: top;
+}
+
+.t_2 {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #948f8a;
+  width: 200rpx;
+  vertical-align: bottom;
+}
+
+.t_3 {
+  margin-right: 10rpx;
+}
+
+.t_4 {
+  color: #fd6700;
+}
+
+.t_5 {
+  font-size: 26rpx;
+  color: #b5afa8;
+}
+
+.t_6 {
+  font-size: 26rpx;
+  color: #b5afa8;
+}
+
+.t_6_txt {
+  color: blue;
+}
+
+.edit_box{
+	display: inline-block;
+}
+.editor{
+	width: 24rpx;
+	height: 24rpx;
+	margin-right: 10rpx;
+	vertical-align: text-top;
+}

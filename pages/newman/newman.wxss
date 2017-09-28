@@ -1,0 +1,66 @@
+/**linkman.wxss**/
+
+/* 修改用户地址信息遮罩层  */
+.g_m_c_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #efefef;    
+  font-size: 28rpx;    
+}
+.g_m_c_r_left{
+  width: 140rpx;
+}
+.g_m_c_r_right{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.des_input{
+  flex: 1;
+  border:none;
+}
+.typepicker{
+  flex: 1;
+}
+.citypicker{
+  flex: 1;
+}
+.point_right{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.cover_page{
+  width: 100%;
+  background: #fff;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+}
+.cover_page_box{
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+.cover_row{
+  padding: 0 40rpx;
+}
+
+
+
+
+/* 底部按钮 */
+.added_btn{
+  background: #70675e;
+}
+.ifbtnbox{
+  flex: 1;
+}

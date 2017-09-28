@@ -1,0 +1,145 @@
+/**linkman.wxss**/
+/* 头部收发件人信息 */
+.linkman_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 14rpx 20rpx;
+  background: #efefef;
+  line-height: 60rpx;
+}
+.middle_line{
+  width: 60rpx;
+  margin:0 20rpx;
+}
+.p_rignr_line{
+  width: 60rpx;
+  height: 10rpx;
+}
+.l_s_a{
+  flex: 1;
+}
+.ico_post{
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.ico_accept{
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #fd6a00;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.phone{
+  font-size: 24rpx;
+  color: #948f8a;
+}
+.address{
+  font-size: 24rpx;
+  color: #948f8a;  
+  line-height: 32rpx;
+}
+/*tab按钮  */
+.tab {
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30rpx;
+
+}
+.tab_item{
+   flex: 1; 
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #efefef;  
+}
+.i_active{
+  border-bottom-color: #fd6a00;
+  color: #fd6a00;
+}
+/* 列表item */
+.i_item{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #efefef;
+}
+.radio_box{
+  width: 60rpx;
+  display: flex;
+}
+.rad{
+  margin: auto;
+  width: 40rpx;
+  height: 40rpx;
+}
+.msg_box{
+  flex: 1;
+  font-size: 26rpx;
+  line-height: 46rpx;
+  color: #948f8a;
+  padding: 16rpx;
+}
+
+.i_name{
+  font-size: 28rpx;
+  color: #000;
+  margin-right: 10rpx;
+}
+.i_company{
+  font-size: 24rpx;
+}
+.i_phone{
+  margin-right: 10rpx;
+  vertical-align: middle;
+  
+}
+.i_address{
+  margin-top: 6rpx;
+}
+.editor{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.e_txt{
+  vertical-align: bottom;
+}
+.row{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.edi_box{
+  display: inline-block;
+}
+.call_a{
+  background: #fd6a00;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+/* 底部按钮 */
+.added_btn{
+  background: #70675e;
+}
+.ifbtnbox{
+  flex: 1;
+}

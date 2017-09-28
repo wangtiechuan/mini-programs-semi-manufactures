@@ -1,0 +1,131 @@
+<!--linkman.wxml-->
+<view class="container">
+  <view class='top_box'>
+
+    <view class="top_content">
+      <text class='pagetitle'>新建联系人</text>
+      <view class="showmenu">
+        <!-- <image class="showmenuimg" src="../../img/ico-wtwindow-28.png"></image>  -->
+      </view>
+    </view>
+  </view>
+
+  <view class='container_box'>
+
+      <view class='cover_page'>
+    <view class='cover_page_box'>
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">姓名</text>
+        </view>
+        <view class="g_m_c_r_right">
+            <input class="des_input" type="text" confirm-type="done"   bindinput="f_name"/>
+
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">称呼</text>
+        </view>
+        <view class="g_m_c_r_right">
+          <picker class="typepicker" bindchange="bindPickerChange_callsex" value="{{callsexindex}}" range="{{callsexarray}}">
+            <view class="picker">
+              {{callsexarray[callsexindex]}}
+            </view>
+          </picker>
+          <view>
+            <image class="point_right" src="../../img/ico-right.png"></image>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">电话</text>
+        </view>
+        <view class="g_m_c_r_right">
+            <input class="des_input" type="text" confirm-type="done" bindinput='f_phone'/>
+      
+          <text></text>
+        </view>
+      </view>
+
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">单位</text>
+        </view>
+        <view class="g_m_c_r_right">
+
+            <input class="des_input" type="text" confirm-type="done" bindinput='f_company'/>
+        
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">地址</text>
+        </view>
+        <view class="g_m_c_r_right">
+          <picker class="citypicker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+          </picker>
+          <view>
+            <image class="point_right" src="../../img/ico-right.png"></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">街道</text>
+        </view>
+        <view class="g_m_c_r_right">
+            <input class="des_input" type="text" confirm-type="done" bindinput='f_street'/>
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">门牌</text>
+        </view>
+        <view class="g_m_c_r_right">
+            <input class="des_input" type="text" confirm-type="done" bindinput='f_doorplate'/>
+          <text></text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  </view>
+
+
+
+  <view class='footer_btn_box'>
+    <view wx:if="{{pOra==1}}" class="ifbtnbox">
+      <navigator class="footer_btn added_btn" url="../linkman/linkman?postOraccept=1" open-type="redirect">返回</navigator>
+    </view>
+
+
+    <view wx:elif='{{pOra==0}}' class="ifbtnbox">
+      <navigator class="footer_btn added_btn" url="../linkman/linkman?postOraccept=0" open-type="redirect">返回</navigator>
+    </view>
+
+ <view wx:if="{{pOra==1}}" class="ifbtnbox">
+      <navigator  class="footer_btn" url="../linkman/linkman?postOraccept=1&sure=1" open-type="redirect" >确定</navigator>
+    </view>
+    <view wx:elif='{{pOra==0}}' class="ifbtnbox">
+     <navigator  class="footer_btn" url="../linkman/linkman?postOraccept=0&sure=1" open-type="redirect" >确定</navigator>             
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,121 @@
+<!--linkman.wxml-->
+<view class="container">
+  <view class='top_box'>
+
+    <view class="top_content">
+      <text class='pagetitle'>常用联系人</text>
+      <view class="showmenu">
+         <!-- <image class="showmenuimg" src="../../img/ico-wtwindow-28.png"></image>  -->
+      </view>
+    </view>
+    <view class='linkman_box'>
+      <view class='l_s_a'>
+        <view>
+          <text class='ico_post'>寄</text>
+          <text class='name'>{{p_liArr[p_tapnow].name}}</text>
+        </view>
+        <view class='phone'>{{p_liArr[p_tapnow].phone}}</view>
+        <view class='address'>{{p_liArr[p_tapnow].province}}{{p_liArr[p_tapnow].city}}{{p_liArr[p_tapnow].area}}{{p_liArr[p_tapnow].street}}{{p_liArr[p_tapnow].doorplate}}</view>      
+      </view>
+      <view class='middle_line'>
+        <image class='p_rignr_line' src='../../img/ico-to-right.png'></image>
+      </view>
+      <view class='l_s_a'>
+         <view>
+          <text class='ico_accept'>收</text>
+          <text class='name'>{{a_liArr[a_tapnow].name}}</text>
+        </view>
+        <view class='phone'>{{a_liArr[a_tapnow].phone}}</view>
+        <view class='address'>{{a_liArr[a_tapnow].province}}{{a_liArr[a_tapnow].city}}{{a_liArr[a_tapnow].area}}{{a_liArr[a_tapnow].street}}{{a_liArr[a_tapnow].doorplate}}</view>      
+      </view>
+    </view>
+
+    
+  </view>
+
+  <view class='container_box'>
+
+    <view class='tab' bindtap='tabtype'>
+      <view class="tab_item {{pOra==1 ? 'i_active':''}}" data-type="1">发件人</view>
+      <view class="tab_item {{pOra==1 ? '':'i_active'}}" data-type="0">收件人</view>
+    </view>
+
+    <view class='view_list'>
+    <view wx:if='{{pOra==1}}'>
+     <view  class='i_item' wx:for='{{p_liArr}}' wx:key='{{index}}'>
+        <view class='radio_box'>
+          <radio  class="rad" data-index="{{index}}" checked="{{p_tapnow==index}}" bindtap="nowtapradio"/>
+        </view>
+         <view class='msg_box'>
+          <view class='row'>
+            <view class='r_l'>
+              <text class='i_name'>{{item.name}}</text>
+              <text class='i_company'>{{item.company}}</text>
+            </view>
+            <view class='r_r'>
+              <text class='i_phone'>{{item.phone}}</text>
+              <view class='edi_box'>
+                <image class="editor" src="../../img/ico-edit-1.png"></image>
+                <text class='e_txt'>编辑</text>
+              </view>
+            </view>
+          </view>
+          <view class='row'>
+            <text class='i_address'>{{item.province}}{{item.city}}{{item.area}}{{item.street}}{{item.doorplate}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:elif='{{pOra==0}}'>
+      <view class='call_a'>点击直接联系收件人</view>  
+      <view class='i_item' wx:for='{{a_liArr}}' wx:key='{{index}}'>
+        <view class='radio_box'>
+          <radio  class="rad" data-index="{{index}}" checked="{{a_tapnow == index}}" bindtap='nowtapradio'/>
+        </view>
+        <view class='msg_box'>
+          <view class='row'>
+            <view class='r_l'>
+              <text class='i_name'>{{item.name}}</text>
+              <text class='i_company'>{{item.company}}</text>
+            </view>
+            <view class='r_r'>
+              <text class='i_phone'>{{item.phone}}</text>
+              <view class='edi_box'>
+                <image class="editor" src="../../img/ico-edit-1.png"></image>
+                <text class='e_txt'>编辑</text>
+              </view>
+            </view>
+          </view>
+          <view class='row'>
+            <text class='i_address'>{{item.province}}{{item.city}}{{item.area}}{{item.street}}{{item.doorplate}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+     
+
+     
+
+    </view>
+
+   
+  </view>
+
+
+
+  <view class='footer_btn_box'>
+    <view wx:if="{{pOra==1}}" class="ifbtnbox">
+      <navigator  class="footer_btn added_btn" url="../newman/newman?postOraccept=1" open-type="redirect" >新发件人</navigator>
+    </view>
+    <view wx:elif='{{pOra==0}}' class="ifbtnbox">
+     <navigator  class="footer_btn added_btn" url="../newman/newman?postOraccept=0" open-type="redirect" >新收件人</navigator>             
+    </view>
+    
+
+     <button class="footer_btn" bindtap='topostexpress'>确定</button>
+  </view>
+  
+</view>

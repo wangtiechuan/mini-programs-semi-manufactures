@@ -1,0 +1,304 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top_box'>
+
+    <view class="top_content">
+      <text class='pagetitle'>快递下单</text>
+      <view class="showmenu" bindtap="showmenu">
+        <image class="showmenuimg" src="../../img/ico-wtwindow-28.png"></image>
+      </view>
+    </view>
+
+    <view class="address_msg">
+      <view class="address_row">
+        <view class="address_row_left">
+          <view class="a_r_l_box">
+            <view class="a_r_l_ico">
+              <text class="post_ico">寄</text>
+            </view>
+            <view class="address_msg_con" bindtap='showcoverpage' id="post_box">
+              <view class="a_m_c_top">
+                <view class="a_m_c_t_left">
+                  <text class="name">{{p_name}}</text>
+                  <text class="sex">{{p_sex}}</text>
+                </view>
+                <view class="a_m_c_t_right">
+                  <text class="phone">{{p_phone}}</text>
+                </view>
+              </view>
+              <view class="a_m_c_bottom">
+                <text class="address_text">{{p_province}}{{p_city}}{{p_area}}{{p_street}}{{p_doorplate}}{{p_company}}</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <view class="address_row_right">
+           <navigator  class="address_btn" url="../linkman/linkman?postOraccept=1" open-type="redirect" >地址簿</navigator>         
+        </view>
+      </view>
+      <view class="address_row">
+        <view class="address_row_left">
+          <view class="a_r_l_box">
+            <view class="a_r_l_ico">
+              <text class="accept_ico">收</text>
+            </view>
+            <view class="address_msg_con" bindtap='showcoverpage' id="accept_box">
+              <view class="a_m_c_top">
+                <view class="a_m_c_t_left">
+                  <text class="name">{{a_name}}</text>
+                  <text class="sex">{{a_sex}}</text>
+                </view>
+                <view class="a_m_c_t_right">
+                  <text class="phone">{{a_phone}}</text>
+                </view>
+              </view>
+              <view class="a_m_c_bottom">
+                <text class="address_text">{{a_province}}{{a_city}}{{a_area}}{{a_street}}{{a_doorplate}}{{a_company}}</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <view class="address_row_right">
+            <navigator class="address_btn"  url="../linkman/linkman?postOraccept=0" open-type="redirect" >地址簿</navigator> 
+        </view>
+      </view>
+    </view>
+
+    <view class='bo_line'></view>
+  </view>
+
+  <view class='container_box'>
+
+    <view class="goods_msg">
+      <view class="g_m_title">
+        <view class="a_m_t_img_box">
+          <image class="a_m_t_img" src="../../img/ico-wupin.png"></image>
+        </view>
+        <text>物品信息</text>
+      </view>
+      <view class="g_m_con">
+        <view class="g_m_c_row">
+          <view class="g_m_c_r_left">
+            <text class="g_msg_title">物品类型:</text>
+          </view>
+          <view class="g_m_c_r_right">
+            <picker class="typepicker" bindchange="bindPickerChange_goodstype" value="{{goodstypeindex}}" range="{{goodstypearray}}">
+              <view class="picker">
+                {{goodstypearray[goodstypeindex]}}
+              </view>
+            </picker>
+            <view>
+              <image class="point_right" src="../../img/ico-right.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="g_m_c_row">
+          <view class="g_m_c_r_left">
+            <text class="g_msg_title">物品重量:</text>
+          </view>
+          <view class="g_m_c_r_right">
+            <view class="w_inout_box">
+              <input class="weightinput" type="number" confirm-type="done" value='{{goods_weight}}' bindinput='i_weight'/>
+              <text>KG</text>
+            </view>
+
+            <text>(1KG起算)</text>
+          </view>
+        </view>
+        <view class="g_m_c_row">
+          <view class="g_m_c_r_left">
+            <text class="g_msg_title">物品尺寸:</text>
+          </view>
+          <view class="g_m_c_r_right">
+            <input class="sizeinput" type="number" confirm-type="done" value='{{goods_msg.l}}' bindinput='i_g_l'/>
+            <input class="sizeinput" type="number" confirm-type="done" value='{{goods_msg.w}}' bindinput='i_g_w'/>
+            <input class="sizeinput" type="number" confirm-type="done" value='{{goods_msg.h}}' bindinput='i_g_h'/>
+            <text>cm</text>
+          </view>
+        </view>
+        <view class="g_m_c_row">
+          <view class="g_m_c_r_left">
+            <text class="g_msg_title">物品描述:</text>
+          </view>
+          <view class="g_m_c_r_right">
+            <input class="des_input" type="text" confirm-type="done" value="{{goods_des}}" bindinput="g_des"/>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <view class='bo_line'></view>
+      <view class="g_m_c_row paypeople">
+        <view class="g_m_c_r_left">
+          <view class="a_r_l_ico_money">
+            <text class="money_ico">￥</text>
+          </view>
+        </view>
+        <view class="g_m_c_r_right">
+          <picker class="typepicker" bindchange="bindPickerChange_payperson" value="{{paypersonindex}}" range="{{paypersonarray}}">
+            <view class="picker">
+              {{paypersonarray[paypersonindex]}}
+            </view>
+          </picker>
+          <view>
+            <image class="point_right" src="../../img/ico-right.png"></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+
+
+  </view>
+
+
+
+  <view class='footer_btn_box'>
+    <button class="footer_btn" bindtap='submit'>确定</button>
+  </view>
+
+  <view class="pagemenu" animation="{{menuanimate}}">
+    <view class="menu_item" bindtap="toaccount">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_dialog.png"></image>
+      </view>
+      <text class="menu_text">账户中心</text>
+    </view>
+    <view class="menu_item menu_center" bindtap="tosearchorder">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_msg.png"></image>
+      </view>
+      <text class="menu_text">我的订单</text>
+    </view>
+    <view class="menu_item" bindtap="toacceptexpress">
+      <view class="menu_ico">
+        <image class="menu_img" src="../../img/icon_nav_progress.png"></image>
+      </view>
+      <text class="menu_text">收快递</text>
+    </view>
+  </view>
+
+  <view class='cover_page' animation="{{coverpageanimate}}">
+    <view class='cover_page_box' data-noewtype="postOraccept">
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">姓名</text>
+        </view>
+        <view class="g_m_c_r_right">
+
+          <view wx:if="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{p_name}}"  bindinput="f_name"/>
+          </view>
+          <view wx:else="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{a_name}}" bindinput="f_name"/>
+          </view>
+
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">称呼</text>
+        </view>
+        <view class="g_m_c_r_right">
+          <picker class="typepicker" bindchange="bindPickerChange_callsex" value="{{callsexindex}}" range="{{callsexarray}}">
+            <view class="picker">
+              {{callsexarray[callsexindex]}}
+            </view>
+          </picker>
+          <view>
+            <image class="point_right" src="../../img/ico-right.png"></image>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">电话</text>
+        </view>
+        <view class="g_m_c_r_right">
+           <view wx:if="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{p_phone}}" bindinput='f_phone'/>
+          </view>
+          <view wx:else="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{a_phone}}" bindinput='f_phone'/>
+          </view>
+          <text></text>
+        </view>
+      </view>
+
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">单位</text>
+        </view>
+        <view class="g_m_c_r_right">
+           <view wx:if="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{p_company}}" bindinput='f_company'/>
+          </view>
+          <view wx:else="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{a_company}}" bindinput='f_company'/>
+          </view>
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">地址</text>
+        </view>
+        <view class="g_m_c_r_right">
+          <picker class="citypicker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+          </picker>
+          <view>
+            <image class="point_right" src="../../img/ico-right.png"></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">街道</text>
+        </view>
+        <view class="g_m_c_r_right">
+         <view wx:if="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{p_street}}" bindinput='f_street'/>
+          </view>
+          <view wx:else="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{a_street}}" bindinput='f_street'/>
+          </view>
+          <text></text>
+        </view>
+      </view>
+
+      <view class="g_m_c_row cover_row">
+        <view class="g_m_c_r_left">
+          <text class="g_msg_title">门牌</text>
+        </view>
+        <view class="g_m_c_r_right">
+            <view wx:if="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{p_doorplate}}" bindinput='f_doorplate'/>
+          </view>
+          <view wx:else="{{postOraccept}}">
+            <input class="des_input" type="text" confirm-type="done" value="{{a_doorplate}}" bindinput='f_doorplate'/>
+          </view>
+          <text></text>
+        </view>
+      </view>
+
+    </view>
+    <view class='footer_btn_box'>
+      <button class="footer_btn" bindtap='closecoverpage'>确定</button>
+    </view>
+  </view>
+
+
+</view>
